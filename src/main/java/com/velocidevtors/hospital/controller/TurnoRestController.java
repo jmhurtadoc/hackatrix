@@ -21,5 +21,5 @@ public class TurnoRestController {
 	public List<Turno> obtenerListaTurnos() {
 		return turnoService.findAll();
 	}
-
+	
 }
