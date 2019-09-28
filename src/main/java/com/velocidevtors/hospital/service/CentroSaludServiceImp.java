@@ -24,5 +24,9 @@ public class CentroSaludServiceImp implements ICentroSaludService{
 	public List<CentroSalud> findAllByEPS(Long id_eps) {
 		return centroSaludDao.findAllByEPS(id_eps);
 	}
+	
+	public List<CentroSalud> findNear(Long id_eps) {
+		return centroSaludDao.findAllByEPS(id_eps);
+	} 
 
 }
