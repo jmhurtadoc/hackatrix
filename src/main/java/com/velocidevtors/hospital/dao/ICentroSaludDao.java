@@ -8,8 +8,9 @@ import org.springframework.data.repository.CrudRepository;
 import com.velocidevtors.hospital.entity.CentroSalud;
 
 public interface ICentroSaludDao extends CrudRepository<CentroSalud, Long>{
-	
-	@Query("select c from centro_salud c where c.eps_id=?1")
-	List<CentroSalud> findAllByEPS(Integer id_eps);
+	@Query(
+		  value = "SELECT * FROM centro_salud u WHERE u.eps_id = ?1", 
+		  nativeQuery = true)
+	List<CentroSalud> findAllByEPS(Long id_eps);
 
 }

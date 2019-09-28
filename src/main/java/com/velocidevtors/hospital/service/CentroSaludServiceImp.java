@@ -21,7 +21,7 @@ public class CentroSaludServiceImp implements ICentroSaludService{
 		return (List<CentroSalud>) centroSaludDao.findAll();
 	}
 
-	public List<CentroSalud> findAllByEPS(Integer id_eps) {
+	public List<CentroSalud> findAllByEPS(Long id_eps) {
 		return centroSaludDao.findAllByEPS(id_eps);
 	}
 
