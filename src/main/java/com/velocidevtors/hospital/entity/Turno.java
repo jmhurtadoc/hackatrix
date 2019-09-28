@@ -14,6 +14,8 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 @Entity
 @Table(name = "turno")
 public class Turno {
@@ -40,6 +42,7 @@ public class Turno {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_centro_salud")
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
 	private CentroSalud centroSalud;
 
 	public Long getId() {
