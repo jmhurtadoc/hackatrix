@@ -13,4 +13,9 @@ public interface ICentroSaludDao extends CrudRepository<CentroSalud, Long>{
 		  nativeQuery = true)
 	List<CentroSalud> findAllByEPS(Long id_eps);
 
+	@Query(
+		  value = "SELECT * FROM centro_salud u order by u.tiempo asc limit 3", 
+		  nativeQuery = true)
+	List<CentroSalud> findNear(String longitid, String latitud);
+
 }

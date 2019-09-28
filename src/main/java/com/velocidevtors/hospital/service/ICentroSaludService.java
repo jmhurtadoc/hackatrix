@@ -9,5 +9,7 @@ public interface ICentroSaludService {
 	public List<CentroSalud> findAll();
 	
 	public List<CentroSalud> findAllByEPS(Long id_eps);
+	
+	public List<CentroSalud> findNear(String longitid, String latitud);
 
 }

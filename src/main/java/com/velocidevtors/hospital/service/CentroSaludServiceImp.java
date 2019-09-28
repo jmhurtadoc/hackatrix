@@ -25,8 +25,8 @@ public class CentroSaludServiceImp implements ICentroSaludService{
 		return centroSaludDao.findAllByEPS(id_eps);
 	}
 	
-	public List<CentroSalud> findNear(Long id_eps) {
-		return centroSaludDao.findAllByEPS(id_eps);
+	public List<CentroSalud> findNear(String longitid, String latitud) {
+		return centroSaludDao.findNear(longitid, latitud);
 	} 
 
 }
