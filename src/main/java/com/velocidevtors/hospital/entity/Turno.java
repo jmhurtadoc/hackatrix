@@ -27,15 +27,15 @@ public class Turno {
 	private String estado;
 
 	@Column(name = "fecha_inicio")
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaInicio;
 
 	@Column(name = "fecha_atencion")
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaAtencion;
 
 	@Column(name = "fecha_finalizacion")
-	@Temporal(TemporalType.DATE)
+	@Temporal(TemporalType.TIMESTAMP)
 	private Date fechaFinalizacion;
 
 	@ManyToOne(fetch = FetchType.LAZY)
