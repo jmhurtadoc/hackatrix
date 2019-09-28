@@ -26,13 +26,36 @@ public class CentroSalud implements Serializable {
 	private Integer tiempo;
 	private String direccion;
 	private String nombre;
+	private String latitud;
+	private String longitud;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="eps_id")
 	private EPS eps;
-	@Column(name = "fecha_creacion")
-	@Temporal(TemporalType.DATE)
-	private Date fechaCreacion;
+
+	
+	public String getLatitud() {
+		return latitud;
+	}
+
+
+
+	public void setLatitud(String latitud) {
+		this.latitud = latitud;
+	}
+
+
+
+	public String getLongitud() {
+		return longitud;
+	}
+
+
+
+	public void setLongitud(String longitud) {
+		this.longitud = longitud;
+	}
+
 
 
 	public Long getId() {
@@ -104,19 +127,6 @@ public class CentroSalud implements Serializable {
 	public void setEps(EPS eps) {
 		this.eps = eps;
 	}
-
-
-
-	public Date getFechaCreacion() {
-		return fechaCreacion;
-	}
-
-
-
-	public void setFechaCreacion(Date fechaCreacion) {
-		this.fechaCreacion = fechaCreacion;
-	}
-
 
 
 	public static long getSerialversionuid() {
