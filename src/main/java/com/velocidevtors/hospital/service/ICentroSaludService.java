@@ -7,5 +7,7 @@ import com.velocidevtors.hospital.entity.CentroSalud;
 public interface ICentroSaludService {
 	
 	public List<CentroSalud> findAll();
+	
+	public List<CentroSalud> findAllByEPS(Integer id_eps);
 
 }
