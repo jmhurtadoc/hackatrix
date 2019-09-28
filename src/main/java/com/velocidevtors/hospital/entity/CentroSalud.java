@@ -5,9 +5,12 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -18,27 +21,28 @@ public class CentroSalud implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_centro_salud;
+	private Long id;
 	private Integer personas;
 	private Integer tiempo;
 	private String direccion;
 	private String nombre;
 	
+	@ManyToOne(fetch=FetchType.LAZY)
+    @JoinColumn(name="eps_id")
 	private EPS eps;
 	@Column(name = "fecha_creacion")
 	@Temporal(TemporalType.DATE)
 	private Date fechaCreacion;
 
-	
 
-	public Long getId_centro_salud() {
-		return id_centro_salud;
+	public Long getId() {
+		return id;
 	}
 
 
 
-	public void setId_centro_salud(Long id_centro_salud) {
-		this.id_centro_salud = id_centro_salud;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 

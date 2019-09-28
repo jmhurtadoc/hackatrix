@@ -18,20 +18,18 @@ public class EPS implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id_eps;
+	private Long id;
 	private String nombre;
-	@Column(name = "fecha_creacion")
-	@Temporal(TemporalType.DATE)
-	private Date fechaCreacion;
 
-	public Long getId_eps() {
-		return id_eps;
+
+	public Long getId() {
+		return id;
 	}
 
 
 
-	public void setId_eps(Long id_eps) {
-		this.id_eps = id_eps;
+	public void setId(Long id) {
+		this.id = id;
 	}
 
 
@@ -44,24 +42,6 @@ public class EPS implements Serializable {
 
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
-	}
-
-
-
-	public Date getFechaCreacion() {
-		return fechaCreacion;
-	}
-
-
-
-	public void setFechaCreacion(Date fechaCreacion) {
-		this.fechaCreacion = fechaCreacion;
-	}
-
-
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 
 
