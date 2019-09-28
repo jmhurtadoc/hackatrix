@@ -18,8 +18,8 @@ public class CentroSaludRestController {
 	private ICentroSaludService centroSaludService;
 	
 	@GetMapping("/obtenerCentroSaludPorEPS/{id_eps}")
-	public List<CentroSalud> obtenerCentroSaludPorEPS(@PathVariable Integer id_eps){
+	public List<CentroSalud> obtenerCentroSaludPorEPS(@PathVariable Long id_eps){
 		System.out.println("id_eps : " + id_eps);
-		return centroSaludService.findAll();
+		return centroSaludService.findAllByEPS(id_eps);
 	}
 }

@@ -1,9 +1,7 @@
 package com.velocidevtors.hospital.entity;
 
 import java.io.Serializable;
-import java.util.Date;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -12,8 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
 @Table(name = "centro_salud")
@@ -31,6 +29,7 @@ public class CentroSalud implements Serializable {
 	
 	@ManyToOne(fetch=FetchType.LAZY)
     @JoinColumn(name="eps_id")
+	@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
 	private EPS eps;
 
 	
@@ -126,11 +125,6 @@ public class CentroSalud implements Serializable {
 
 	public void setEps(EPS eps) {
 		this.eps = eps;
-	}
-
-
-	public static long getSerialversionuid() {
-		return serialVersionUID;
 	}
 
 

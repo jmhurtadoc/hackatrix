@@ -8,6 +8,6 @@ public interface ICentroSaludService {
 	
 	public List<CentroSalud> findAll();
 	
-	public List<CentroSalud> findAllByEPS(Integer id_eps);
+	public List<CentroSalud> findAllByEPS(Long id_eps);
 
 }
