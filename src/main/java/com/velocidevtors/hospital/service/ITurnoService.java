@@ -8,4 +8,6 @@ public interface ITurnoService {
 
 	public List<Turno> findAll();
 
+	public List<Turno> findByCentroSalud(Long id_centro_salud);
+
 }

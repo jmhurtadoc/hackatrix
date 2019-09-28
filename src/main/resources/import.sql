@@ -11,3 +11,16 @@ INSERT INTO public.centro_salud(id, direccion, nombre, personas, tiempo, eps_id)
 INSERT INTO public.centro_salud(id, direccion, nombre, personas, tiempo, eps_id) VALUES (4, 'Ac. 26 ##69-63','4.6599484', '-74.1338485' 'Boston Medical Group', 5, '5', 1);
 INSERT INTO public.centro_salud(id, direccion, nombre, personas, tiempo, eps_id) VALUES (5, 'Ak. 70 #51-41','4.6669137', '-74.107867' 'IPS Marco Fidel', 7, 20, 1);
 INSERT INTO public.centro_salud(id, direccion, nombre, personas, tiempo, eps_id) VALUES (6, 'Cra. 69b #23C-76','4.6669616', '-74.123188' 'Denti Salud', 12, 5, 1);
+
+INSERT INTO public.turno(id, turno, estado, fecha_inicio, fecha_atencion, fecha_finalizacion, id_centro_salud)
+    VALUES(1, '1', 'REGISTRADO', '1569707711',  '1569707712', '1569708677', 1);
+INSERT INTO public.turno(id, turno, estado, fecha_inicio, fecha_atencion, fecha_finalizacion, id_centro_salud)
+    VALUES(2, '2', 'REGISTRADO', '1569707711',  '1569707712', '1569708677', 1);
+INSERT INTO public.turno(id, turno, estado, fecha_inicio, fecha_atencion, fecha_finalizacion, id_centro_salud)
+    VALUES(3, '3', 'REGISTRADO', '1569707711',  '1569707712', '1569708677', 1);
+INSERT INTO public.turno(id, turno, estado, fecha_inicio, fecha_atencion, fecha_finalizacion, id_centro_salud)
+    VALUES(4, '1', 'REGISTRADO', '1569707711',  '1569707712', '1569708677', 2);
+INSERT INTO public.turno(id, turno, estado, fecha_inicio, fecha_atencion, fecha_finalizacion, id_centro_salud)
+    VALUES(5, '2', 'REGISTRADO', '1569707711',  '1569707712', '1569708677', 2);
+INSERT INTO public.turno(id, turno, estado, fecha_inicio, fecha_atencion, fecha_finalizacion, id_centro_salud)
+    VALUES(6, '3', 'REGISTRADO', '1569707711',  '1569707712', '1569708677', 2);

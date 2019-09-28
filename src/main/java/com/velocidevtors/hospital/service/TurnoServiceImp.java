@@ -19,4 +19,9 @@ public class TurnoServiceImp implements ITurnoService {
 		return (List<Turno>) turnoDao.findAll();
 	}
 
+	@Override
+	public List<Turno> findByCentroSalud(Long id_centro_salud) {
+		return turnoDao.findAllByCentroSalud(id_centro_salud);
+	}
+
 }
